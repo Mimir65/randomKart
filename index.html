@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11110f">
+  <title>DEADLOCK // CHALLENGE ROOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Deadlock Challenge">
+      <span class="brand-mark">D<span>/</span>C</span>
+      <span class="brand-name">CHALLENGE<br><b>ROOM</b></span>
+    </a>
+    <nav class="main-nav">
+      <a class="active" href="#play">АРКАДА <i>01</i></a>
+      <a href="#rules">ПРАВИЛА <i>02</i></a>
+      <a href="#about">О ПРОЕКТЕ <i>03</i></a>
+    </nav>
+    <div class="top-status"><span class="pulse"></span> СИСТЕМА ГОТОВА <small>BUILD 0.5</small></div>
+    <button class="menu-btn" id="menuBtn" aria-label="Открыть меню">☰</button>
+  </header>
+
+  <main>
+    <section class="ticker" aria-label="Бегущая строка">
+      <div class="ticker-track">
+        <span>NO META</span><b>✳</b><span>NO MERCY</span><b>✳</b><span>JUST CHAOS</span><b>✳</b><span>DEADLOCK CHALLENGE</span><b>✳</b><span>NO META</span><b>✳</b><span>NO MERCY</span><b>✳</b><span>JUST CHAOS</span><b>✳</b><span>DEADLOCK CHALLENGE</span><b>✳</b>
+      </div>
+    </section>
+
+    <section class="intro" id="play">
+      <div class="intro-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> COMMUNITY GAME MODE / 001</div>
+        <h1>ТВОЯ ИГРА.<br><em>ТВОИ ПРОБЛЕМЫ.</em></h1>
+        <p>Два игрока. Два случайных испытания. Один матч, который точно пойдёт не по плану.</p>
+      </div>
+      <div class="intro-stamp">
+        <div class="stamp-ring">DEADLOCK<br>CHALLENGE<br>EST. 2026</div>
+        <span class="stamp-cross">✳</span>
+      </div>
+      <div class="intro-side">PLAY DIRTY<br>PLAY DIFFERENT<br><span>↓ SCROLL TO ENTER</span></div>
+    </section>
+
+    <section class="arcade-shell">
+      <div class="section-head">
+        <div><span class="section-index">01 / ARCADE</span><h2>ВЫБЕРИ СВОЙ <i>ЯД.</i></h2></div>
+        <div class="section-note">СОБЕРИ ЛОББИ —<br>ЕСЛИ НЕ СЛАБО.</div>
+      </div>
+
+      <div class="arcade-grid">
+        <article class="mode-card mode-main" id="roomCard">
+          <div class="card-topline"><span>MODE_01 / MULTIPLAYER</span><span class="live-tag"><i></i> PLAYABLE</span></div>
+          <div class="main-card-art">
+            <div class="art-sun"></div><div class="art-slash slash-one"></div><div class="art-slash slash-two"></div>
+            <div class="art-word">DUO<br><b>CHAOS</b></div>
+            <div class="art-number">01</div>
+            <div class="art-caption">TWO PLAYERS / ONE MATCH</div>
+          </div>
+          <div class="mode-info">
+            <div><h3>DUO CHALLENGE</h3><p>Создай комнату и брось вызов напарнику. Карты вскроются одновременно.</p></div>
+            <button class="arrow-btn" id="openRoom" aria-label="Открыть режим">↗</button>
+          </div>
+        </article>
+
+        <article class="mode-card mode-rules" id="rules">
+          <div class="card-topline"><span>HOW TO PLAY / 03 STEPS</span><span class="tiny-cross">✳</span></div>
+          <div class="rules-visual">
+            <div class="rule-ticket"><span>01</span><b>CHOOSE<br>DIFFICULTY</b><small>ЛЁГКО / НОРМ / ЖЕСТЬ</small></div>
+            <div class="rule-ticket ticket-offset"><span>02</span><b>DRAW<br>A CARD</b><small>ОДИН РЕРOЛЛ</small></div>
+            <div class="rule-ticket"><span>03</span><b>LOCK IN<br>AND PLAY</b><small>НЕ НОЙ</small></div>
+          </div>
+          <div class="mode-info">
+            <div><h3>ПРАВИЛА ПРОСТЫЕ</h3><p>Выбираете сложность, тянете испытание и выполняете его в следующем матче.</p></div>
+            <span class="rule-count">03<br><small>STEPS</small></span>
+          </div>
+        </article>
+
+        <article class="mode-card mode-stats">
+          <div class="card-topline"><span>ROOM STATUS / LIVE</span><span class="tiny-cross">✳</span></div>
+          <div class="stats-visual">
+            <div class="stat-orbit orbit-a"></div><div class="stat-orbit orbit-b"></div>
+            <div class="stat-center"><strong>2</strong><span>PLAYERS</span></div>
+            <div class="stat-label label-a">01 / HOST</div><div class="stat-label label-b">02 / GUEST</div>
+          </div>
+          <div class="mode-info">
+            <div><h3>ТВОЙ ДУЭТ</h3><p>Локальная комната для теста или онлайн-комната через Supabase.</p></div>
+            <span class="status-mini"><i></i> READY</span>
+          </div>
+        </article>
+
+        <article class="mode-card mode-quote" id="about">
+          <div class="quote-mark">“</div>
+          <blockquote>ТЫ МОЖЕШЬ ВЫИГРАТЬ МАТЧ.<br><em>НО СМОЖЕШЬ ЛИ ТЫ ВЫПОЛНИТЬ ЧЕЛЛЕНДЖ?</em></blockquote>
+          <div class="quote-bottom"><span>THE CITY NEVER SLEEPS.</span><span>— D/C</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="room-section" id="roomSection">
+      <div class="room-heading">
+        <span class="section-index">02 / MATCHMAKING</span>
+        <h2>ВХОД В <i>КОМНАТУ</i></h2>
+        <p>Создай комнату или введи код напарника. Без регистрации и лишней возни.</p>
+      </div>
+      <div class="room-panel">
+        <div class="panel-top"><span>CONNECTION_TERMINAL</span><span id="connectionState"><i></i> OFFLINE MODE</span></div>
+        <div class="room-actions">
+          <div class="room-action-block">
+            <div class="action-number">01</div><h3>СОЗДАТЬ КОМНАТУ</h3>
+            <p>Стань хостом и отправь код второму игроку.</p>
+            <button class="action-btn hot" id="createRoom">СОЗДАТЬ <span>↗</span></button>
+          </div>
+          <div class="action-divider"><span>ИЛИ</span></div>
+          <div class="room-action-block">
+            <div class="action-number">02</div><h3>ПРИСОЕДИНИТЬСЯ</h3>
+            <p>Введи код комнаты, который тебе отправили.</p>
+            <div class="join-line"><input id="roomCodeInput" maxlength="6" placeholder="КОД: A7K2Q9" autocomplete="off"><button class="action-btn" id="joinRoom">ВОЙТИ ↗</button></div>
+          </div>
+        </div>
+        <div class="panel-foot"><span>LOCAL MODE: SAME BROWSER ONLY</span><span>ONLINE MODE: SUPABASE CONFIG REQUIRED</span></div>
+      </div>
+    </section>
+
+    <section class="game-section" id="gameSection" hidden>
+      <div class="game-top">
+        <div><span class="section-index">03 / ACTIVE SESSION</span><h2>КОМНАТА <i id="activeRoomCode">------</i></h2></div>
+        <div class="session-meta"><span id="roomMode">LOCAL ROOM</span><button id="leaveRoom" class="text-btn">ПОКИНУТЬ ↗</button></div>
+      </div>
+      <div class="players-strip">
+        <div class="player-slot"><span class="player-tag">PLAYER 01 / HOST</span><strong id="playerOneName">ИГРОК 1</strong><small id="playerOneState">ОЖИДАЕТ...</small></div>
+        <div class="versus">VS</div>
+        <div class="player-slot"><span class="player-tag">PLAYER 02 / GUEST</span><strong id="playerTwoName">ИГРОК 2</strong><small id="playerTwoState">ОЖИДАЕТ...</small></div>
+      </div>
+      <div class="challenge-controls">
+        <div class="difficulty-box">
+          <span class="control-label">ТВОЯ СЛОЖНОСТЬ</span>
+          <div class="difficulty-options">
+            <button data-difficulty="easy" class="difficulty active">ЛЁГКО</button>
+            <button data-difficulty="normal" class="difficulty">НОРМ</button>
+            <button data-difficulty="hard" class="difficulty">ЖЕСТЬ</button>
+          </div>
+          <small>Сложность выбирается отдельно каждым игроком.</small>
+        </div>
+        <div class="draw-box">
+          <span class="control-label">ТВОЁ ИСПЫТАНИЕ</span>
+          <div class="draw-card" id="drawCard"><span class="draw-card-index">CARD / 000</span><strong>ГОТОВ<br>К ВЫТЯГИВАНИЮ?</strong><small>НАЖМИ КНОПКУ НИЖЕ</small></div>
+          <button class="action-btn hot draw-btn" id="drawChallenge">ВЫТЯНУТЬ КАРТУ ↗</button>
+          <button class="reroll-btn" id="rerollChallenge" disabled>↻ ОДИН РЕРOЛЛ <span>1/1</span></button>
+        </div>
+      </div>
+      <div class="reveal-area" id="revealArea">
+        <div class="reveal-head"><span>FINAL REVEAL</span><span id="revealStatus">ОЖИДАЕМ ОБОИХ ИГРОКОВ</span></div>
+        <div class="reveal-grid">
+          <div class="reveal-card"><span>PLAYER 01</span><h3 id="revealOneTitle">???</h3><p id="revealOneText">Карты пока закрыты.</p></div>
+          <div class="reveal-card"><span>PLAYER 02</span><h3 id="revealTwoTitle">???</h3><p id="revealTwoText">Карты пока закрыты.</p></div>
+        </div>
+        <div class="reveal-bottom">ОБЕ КАРТЫ ОТКРОЮТСЯ, КОГДА ОБА ИГРОКА ЗАФИКСИРУЮТ ВЫБОР.</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-brand">D<span>/</span>C</div>
+      <div>NOT AN OFFICIAL VALVE PRODUCT<br><span>MADE FOR CHAOS, NOT FOR RANKED.</span></div>
+      <div class="footer-right">DEADLOCK CHALLENGE ROOM <b>© 2026</b></div>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
