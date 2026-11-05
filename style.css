@@ -38,3 +38,32 @@
 .room-heading .duoBack{display:block;margin:0 auto 12px}
 @media(max-width:800px){.mode-select-section,.solo-section{padding:45px 5%}.mode-choice{min-height:175px;padding:17px}.solo-controls{grid-template-columns:1fr}}
 @media(max-width:560px){.mode-select-grid{grid-template-columns:1fr}.mode-choice{min-height:155px}.solo-foot{flex-direction:column;gap:7px}.solo-controls{padding:10px}.solo-controls .difficulty-box,.solo-controls .draw-box{padding:14px}}
+
+/* v0.7: challenge generator is the homepage's main feature */
+.home-challenge{padding:48px 8.5% 62px;background:#151512;border-top:1px solid #33332d}
+.home-challenge .game-top{margin-bottom:20px}
+.solo-controls-wide{grid-template-columns:.55fr 1.45fr;padding:18px;gap:18px}
+.solo-aside{border:1px solid #414138;background:linear-gradient(145deg,#24251b,#1b1b17);padding:22px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;min-height:340px}
+.solo-aside:after{content:"✳";position:absolute;right:-16px;top:12px;font-size:150px;color:#ffffff08}
+.solo-sticker{font:800 14px/.9 var(--display);color:var(--acid);border:1px solid #77775d;width:62px;height:62px;display:grid;place-content:center;text-align:center;transform:rotate(-8deg);margin-bottom:25px}
+.solo-sticker b{font-size:24px}
+.solo-aside h3{font:900 clamp(34px,4vw,54px)/.78 var(--display);margin:0 0 14px;position:relative;z-index:1}
+.solo-aside p{font-size:12px;line-height:1.7;color:#aaa99e;max-width:260px;position:relative;z-index:1}
+.solo-counter{display:flex;align-items:center;gap:12px;margin-top:22px;border-top:1px solid #49493d;padding-top:15px;position:relative;z-index:1}
+.solo-counter strong{font:900 34px var(--display);color:var(--acid)}
+.solo-counter span{font:600 8px/1.5 var(--mono);letter-spacing:1px;color:#8e8e82}
+.solo-draw-box{padding:20px!important}
+.solo-big-card{min-height:255px;padding:28px!important;border:1px dashed #888873;background:repeating-linear-gradient(135deg,#292920 0 10px,#22221b 10px 20px)}
+.solo-big-card .draw-card-index{font-size:11px}
+.solo-big-card strong{font-size:clamp(38px,5vw,66px);line-height:.9;max-width:95%;margin:18px 0}
+.solo-big-card small{font-size:11px;max-width:90%;line-height:1.6}
+.solo-draw-box .control-label{font-size:10px;margin-bottom:16px}
+.solo-draw-box .control-label small{float:right;color:var(--acid);font-size:9px}
+.solo-draw-box .action-btn{height:52px;font-size:11px}
+.solo-draw-box .complete-btn{margin-top:9px}
+#duoShortcut{border:1px solid #57574b;padding:10px 13px;color:var(--acid)}
+#duoShortcut:hover{border-color:var(--acid);color:#171812;background:var(--acid)}
+@media(max-width:800px){.home-challenge{padding:42px 5%}.solo-controls-wide{grid-template-columns:1fr}.solo-aside{min-height:220px}.solo-aside p{max-width:480px}.solo-sticker{margin-bottom:16px}}
+@media(max-width:560px){.home-challenge .game-top{flex-direction:row;align-items:center}.solo-big-card{min-height:220px}.solo-big-card strong{font-size:42px}.solo-draw-box{padding:13px!important}.solo-aside{padding:17px}}
+
+.duo-single-control{grid-template-columns:1fr}.duo-single-control .draw-box{max-width:760px;margin:auto;width:100%}

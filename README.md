@@ -1,17 +1,19 @@
-# DEADLOCK CHALLENGE ROOM — v0.6
+# DEADLOCK CHALLENGE ROOM — v0.7
 
-## Modes
-- Solo: no room required. Choose difficulty and category, draw a challenge, mark it complete, then get a new one.
-- Duo: create/join a room, each player chooses difficulty and draws a card. Cards reveal when both players draw. Each player confirms completion; when both confirm, the next round begins with new cards.
+## Main screen
+The challenge generator is now the main feature directly under the intro. No category picker and no difficulty picker: every card is drawn from one mixed deck.
 
-## Challenge pool
-Edit `challenges` in `app.js`. Each entry is `[TITLE, DESCRIPTION, CATEGORY]`.
-Categories: `heroes`, `items`, `gameplay`, `chaos`.
+## Challenge deck
+There are 65 challenges in `challengeDeck` inside `app.js`. Add or edit cards as `[TITLE, DESCRIPTION]`.
+Includes mouse sensitivity to maximum, disabling Shift, disabling Space, hero, item, gameplay, and chaos challenges.
 
-## Local and online rooms
-Solo works directly in the browser. Duo rooms currently use localStorage + BroadcastChannel and are limited to the same browser/profile. Cross-device rooms require a realtime backend such as Supabase; this version does not pretend that local rooms are online.
+## Completing a challenge
+Draw one card, complete it, press **ЗАДАНИЕ ВЫПОЛНЕНО — СЛЕДУЮЩЕЕ**, then draw a new card. The last-used cards are not repeated until the pool has cycled.
 
-## Publish on GitHub Pages
-Upload `index.html`, `style.css`, `app.js`, and `README.md` to the repository root, then go to Settings → Pages → Deploy from a branch → `main` → `/ (root)` → Save.
+## Duo
+The Duo room entry is a secondary button in the main challenge panel. Duo rooms currently use localStorage + BroadcastChannel and are limited to the same browser/profile. Cross-device play needs a realtime backend such as Supabase.
+
+## Publish
+Replace `index.html`, `style.css`, `app.js`, and `README.md` in the root of your GitHub repository. GitHub Pages will redeploy automatically.
 
 Unofficial fan-made project. Not affiliated with Valve.
