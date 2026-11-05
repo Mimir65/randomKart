@@ -1,25 +1,17 @@
-# DEADLOCK CHALLENGE ROOM — v0.5
+# DEADLOCK CHALLENGE ROOM — v0.6
 
-A compact arcade-style Deadlock challenge room. Russian UI, responsive layout, challenge pools, individual difficulty, simultaneous reveal, one reroll per player.
+## Modes
+- Solo: no room required. Choose difficulty and category, draw a challenge, mark it complete, then get a new one.
+- Duo: create/join a room, each player chooses difficulty and draws a card. Cards reveal when both players draw. Each player confirms completion; when both confirm, the next round begins with new cards.
 
-## Run locally
-Open `index.html` in a browser. For best results, use VS Code Live Server.
+## Challenge pool
+Edit `challenges` in `app.js`. Each entry is `[TITLE, DESCRIPTION, CATEGORY]`.
+Categories: `heroes`, `items`, `gameplay`, `chaos`.
 
-## Important: local room limitation
-Without a backend, rooms are stored in the browser's `localStorage` and synchronized with `BroadcastChannel`. This is only a same-browser / same-profile demo. It does **not** let a friend on another device join using the code.
+## Local and online rooms
+Solo works directly in the browser. Duo rooms currently use localStorage + BroadcastChannel and are limited to the same browser/profile. Cross-device rooms require a realtime backend such as Supabase; this version does not pretend that local rooms are online.
 
-## Enable real online rooms
-This package currently ships with the local demo flow. To enable cross-device rooms, connect a Supabase project and add a Realtime-backed room table / adapter in `app.js`. Do not paste service-role keys into frontend code. Only the public anon key is safe for browser use when paired with correct Row Level Security policies.
-
-## Publish with GitHub Pages
-1. Create a new GitHub repository, e.g. `deadlock-challenge`.
-2. Upload `index.html`, `style.css`, and `app.js` to the repository root.
-3. Open **Settings → Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Choose `main` and `/ (root)`, then Save.
-6. Wait for the Pages URL to appear.
-
-## Edit challenge cards
-Open `app.js` and edit the `challenges` object. It contains `easy`, `normal`, and `hard` arrays. Each card is `[TITLE, DESCRIPTION]`.
+## Publish on GitHub Pages
+Upload `index.html`, `style.css`, `app.js`, and `README.md` to the repository root, then go to Settings → Pages → Deploy from a branch → `main` → `/ (root)` → Save.
 
 Unofficial fan-made project. Not affiliated with Valve.

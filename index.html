@@ -101,11 +101,63 @@
       </div>
     </section>
 
-    <section class="room-section" id="roomSection">
-      <div class="room-heading">
-        <span class="section-index">02 / MATCHMAKING</span>
-        <h2>ВХОД В <i>КОМНАТУ</i></h2>
-        <p>Создай комнату или введи код напарника. Без регистрации и лишней возни.</p>
+    <section class="mode-select-section" id="modeSelect">
+      <div class="section-head">
+        <div><span class="section-index">02 / SELECT MODE</span><h2>КАК <i>ИГРАЕМ?</i></h2></div>
+        <div class="section-note">ОДИН ИЛИ С НАПАРНИКОМ.<br>ВЫБИРАЙ САМ.</div>
+      </div>
+      <div class="mode-select-grid">
+        <button class="mode-choice solo-choice" id="chooseSolo">
+          <span class="choice-index">MODE_01 / SOLO</span><strong>ОДИН<br><em>ПРОТИВ ВСЕХ</em></strong>
+          <span class="choice-desc">Без комнаты. Выбери режим и тяни карточку.</span><b class="choice-arrow">↗</b>
+        </button>
+        <button class="mode-choice duo-choice" id="chooseDuo">
+          <span class="choice-index">MODE_02 / DUO</span><strong>ВМЕСТЕ<br><em>В ХАОС</em></strong>
+          <span class="choice-desc">Создай комнату или подключись к напарнику.</span><b class="choice-arrow">↗</b>
+        </button>
+      </div>
+    </section>
+
+    <section class="solo-section" id="soloSection" hidden>
+      <div class="game-top">
+        <div><span class="section-index">03 / SOLO SESSION</span><h2>SOLO <i>CHALLENGE</i></h2></div>
+        <button class="text-btn" id="soloBack">← ВЫБРАТЬ ДРУГОЙ РЕЖИМ</button>
+      </div>
+      <div class="solo-panel">
+        <div class="panel-top"><span>SOLO_TERMINAL</span><span><i></i> NO ROOM REQUIRED</span></div>
+        <div class="solo-controls">
+          <div class="difficulty-box">
+            <span class="control-label">СЛОЖНОСТЬ</span>
+            <div class="difficulty-options">
+              <button data-solo-difficulty="easy" class="difficulty solo-difficulty active">ЛЁГКО</button>
+              <button data-solo-difficulty="normal" class="difficulty solo-difficulty">НОРМ</button>
+              <button data-solo-difficulty="hard" class="difficulty solo-difficulty">ЖЕСТЬ</button>
+            </div>
+            <span class="control-label category-label">КАТЕГОРИЯ</span>
+            <div class="category-options">
+              <button class="category-btn active" data-category="all">ВСЁ</button>
+              <button class="category-btn" data-category="heroes">ГЕРОИ</button>
+              <button class="category-btn" data-category="items">ПРЕДМЕТЫ</button>
+              <button class="category-btn" data-category="gameplay">ГЕЙМПЛЕЙ</button>
+              <button class="category-btn" data-category="chaos">БЕЗУМИЕ</button>
+            </div>
+          </div>
+          <div class="draw-box">
+            <span class="control-label">ТВОЁ ИСПЫТАНИЕ <small id="soloRound">ROUND / 01</small></span>
+            <div class="draw-card" id="soloCard"><span class="draw-card-index">CARD / 000</span><strong>ТВОЙ ХОД<br>НАЧИНАЕТСЯ ЗДЕСЬ</strong><small>ВЫБЕРИ СЛОЖНОСТЬ И ТЯНИ КАРТУ</small></div>
+            <button class="action-btn hot draw-btn" id="soloDraw">ВЫТЯНУТЬ КАРТУ ↗</button>
+            <button class="action-btn complete-btn" id="soloComplete" disabled>✓ ЗАДАНИЕ ВЫПОЛНЕНО</button>
+          </div>
+        </div>
+        <div class="solo-foot"><span>NO REROLLS. FINISH THE CHALLENGE.</span><span>ВЫПОЛНИЛ — ПОЛУЧИЛ НОВОЕ.</span></div>
+      </div>
+    </section>
+
+    <section class="room-section" id="roomSection" hidden>
+      <div class="room-heading"><button class="text-btn duoBack" id="duoBack">← ВЫБРАТЬ ДРУГОЙ РЕЖИМ</button>
+        <span class="section-index">03 / DUO MATCHMAKING</span>
+        <h2>СОЗДАЙ <i>ДУО-КОМНАТУ</i></h2>
+        <p>Для игры вдвоём. Создай комнату или введи код напарника.</p>
       </div>
       <div class="room-panel">
         <div class="panel-top"><span>CONNECTION_TERMINAL</span><span id="connectionState"><i></i> OFFLINE MODE</span></div>
@@ -128,7 +180,7 @@
 
     <section class="game-section" id="gameSection" hidden>
       <div class="game-top">
-        <div><span class="section-index">03 / ACTIVE SESSION</span><h2>КОМНАТА <i id="activeRoomCode">------</i></h2></div>
+        <div><span class="section-index">04 / ACTIVE DUO SESSION</span><h2>КОМНАТА <i id="activeRoomCode">------</i></h2></div>
         <div class="session-meta"><span id="roomMode">LOCAL ROOM</span><button id="leaveRoom" class="text-btn">ПОКИНУТЬ ↗</button></div>
       </div>
       <div class="players-strip">
@@ -150,7 +202,7 @@
           <span class="control-label">ТВОЁ ИСПЫТАНИЕ</span>
           <div class="draw-card" id="drawCard"><span class="draw-card-index">CARD / 000</span><strong>ГОТОВ<br>К ВЫТЯГИВАНИЮ?</strong><small>НАЖМИ КНОПКУ НИЖЕ</small></div>
           <button class="action-btn hot draw-btn" id="drawChallenge">ВЫТЯНУТЬ КАРТУ ↗</button>
-          <button class="reroll-btn" id="rerollChallenge" disabled>↻ ОДИН РЕРOЛЛ <span>1/1</span></button>
+
         </div>
       </div>
       <div class="reveal-area" id="revealArea">
@@ -160,6 +212,7 @@
           <div class="reveal-card"><span>PLAYER 02</span><h3 id="revealTwoTitle">???</h3><p id="revealTwoText">Карты пока закрыты.</p></div>
         </div>
         <div class="reveal-bottom">ОБЕ КАРТЫ ОТКРОЮТСЯ, КОГДА ОБА ИГРОКА ЗАФИКСИРУЮТ ВЫБОР.</div>
+        <button class="action-btn complete-btn" id="duoComplete" disabled>✓ МОЁ ЗАДАНИЕ ВЫПОЛНЕНО</button>
       </div>
     </section>
 
