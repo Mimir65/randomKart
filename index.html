@@ -33,97 +33,30 @@
       </div>
     </section>
 
-    <section class="intro" id="play">
-      <div class="intro-copy">
+    <section class="intro challenge-hero" id="play">
+      <div class="hero-left">
         <div class="eyebrow"><span class="eyebrow-line"></span> COMMUNITY GAME MODE / 001</div>
-        <h1>ТВОЯ ИГРА.<br><em>ТВОИ ПРОБЛЕМЫ.</em></h1>
-        <p>Два игрока. Два случайных испытания. Один матч, который точно пойдёт не по плану.</p>
+        <h1>DEADLOCK<br><em>HARD MODE.</em></h1>
+        <p>Никаких лёгких заданий. Вытяни испытание, прими правила и попробуй не сгореть.</p>
+        <div class="hero-meta"><span>65+ CHALLENGES</span><b>✳</b><span>NO REROLLS</span><b>✳</b><span>PURE CHAOS</span></div>
       </div>
-      <div class="intro-stamp">
-        <div class="stamp-ring">DEADLOCK<br>CHALLENGE<br>EST. 2026</div>
-        <span class="stamp-cross">✳</span>
-      </div>
-      <div class="intro-side">PLAY DIRTY<br>PLAY DIFFERENT<br><span>↓ SCROLL TO ENTER</span></div>
-    </section>
-
-    <section class="arcade-shell">
-      <div class="section-head">
-        <div><span class="section-index">01 / ARCADE</span><h2>ВЫБЕРИ СВОЙ <i>ЯД.</i></h2></div>
-        <div class="section-note">СОБЕРИ ЛОББИ —<br>ЕСЛИ НЕ СЛАБО.</div>
-      </div>
-
-      <div class="arcade-grid">
-        <article class="mode-card mode-main" id="roomCard">
-          <div class="card-topline"><span>MODE_01 / MULTIPLAYER</span><span class="live-tag"><i></i> PLAYABLE</span></div>
-          <div class="main-card-art">
-            <div class="art-sun"></div><div class="art-slash slash-one"></div><div class="art-slash slash-two"></div>
-            <div class="art-word">DUO<br><b>CHAOS</b></div>
-            <div class="art-number">01</div>
-            <div class="art-caption">TWO PLAYERS / ONE MATCH</div>
-          </div>
-          <div class="mode-info">
-            <div><h3>DUO CHALLENGE</h3><p>Создай комнату и брось вызов напарнику. Карты вскроются одновременно.</p></div>
-            <button class="arrow-btn" id="openRoom" aria-label="Открыть режим">↗</button>
-          </div>
-        </article>
-
-        <article class="mode-card mode-rules" id="rules">
-          <div class="card-topline"><span>HOW TO PLAY / 03 STEPS</span><span class="tiny-cross">✳</span></div>
-          <div class="rules-visual">
-            <div class="rule-ticket"><span>01</span><b>CHOOSE<br>DIFFICULTY</b><small>ЛЁГКО / НОРМ / ЖЕСТЬ</small></div>
-            <div class="rule-ticket ticket-offset"><span>02</span><b>DRAW<br>A CARD</b><small>ОДИН РЕРOЛЛ</small></div>
-            <div class="rule-ticket"><span>03</span><b>LOCK IN<br>AND PLAY</b><small>НЕ НОЙ</small></div>
-          </div>
-          <div class="mode-info">
-            <div><h3>ПРАВИЛА ПРОСТЫЕ</h3><p>Выбираете сложность, тянете испытание и выполняете его в следующем матче.</p></div>
-            <span class="rule-count">03<br><small>STEPS</small></span>
-          </div>
-        </article>
-
-        <article class="mode-card mode-stats">
-          <div class="card-topline"><span>ROOM STATUS / LIVE</span><span class="tiny-cross">✳</span></div>
-          <div class="stats-visual">
-            <div class="stat-orbit orbit-a"></div><div class="stat-orbit orbit-b"></div>
-            <div class="stat-center"><strong>2</strong><span>PLAYERS</span></div>
-            <div class="stat-label label-a">01 / HOST</div><div class="stat-label label-b">02 / GUEST</div>
-          </div>
-          <div class="mode-info">
-            <div><h3>ТВОЙ ДУЭТ</h3><p>Локальная комната для теста или онлайн-комната через Supabase.</p></div>
-            <span class="status-mini"><i></i> READY</span>
-          </div>
-        </article>
-
-        <article class="mode-card mode-quote" id="about">
-          <div class="quote-mark">“</div>
-          <blockquote>ТЫ МОЖЕШЬ ВЫИГРАТЬ МАТЧ.<br><em>НО СМОЖЕШЬ ЛИ ТЫ ВЫПОЛНИТЬ ЧЕЛЛЕНДЖ?</em></blockquote>
-          <div class="quote-bottom"><span>THE CITY NEVER SLEEPS.</span><span>— D/C</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="solo-section home-challenge" id="soloSection">
-      <div class="game-top">
-        <div><span class="section-index">01 / CHALLENGE GENERATOR</span><h2>ТВОЁ <i>ИСПЫТАНИЕ</i></h2></div>
-        <div class="session-meta"><span id="soloRound">ROUND / 01</span><button class="text-btn" id="duoShortcut">ИГРАТЬ ВДВОЁМ ↗</button></div>
-      </div>
-      <div class="solo-panel">
-        <div class="panel-top"><span>CHALLENGE_TERMINAL</span><span><i></i> RANDOM MODE / ALL CARDS</span></div>
-        <div class="solo-controls solo-controls-wide">
-          <div class="solo-aside">
-            <div class="solo-sticker">D/C<br><b>01</b></div>
-            <h3>НИКАКОГО<br>ВЫБОРА.</h3>
-            <p>Каждый раз выпадает случайное испытание из общей колоды. Герои, предметы, геймплей и полный хаос — всё вперемешку.</p>
-            <div class="solo-counter"><strong id="challengeCount">060+</strong><span>ИСПЫТАНИЙ<br>В КОЛОДЕ</span></div>
-          </div>
-          <div class="draw-box solo-draw-box">
-            <span class="control-label">СЛУЧАЙНАЯ КАРТА <small id="soloRoundLabel">ROUND / 01</small></span>
-            <div class="draw-card solo-big-card" id="soloCard"><span class="draw-card-index">CARD / 000</span><strong>ГОТОВ<br>К ИСПЫТАНИЮ?</strong><small>ЖМИ КНОПКУ — И ПОЛУЧАЙ СВОЁ ЗАДАНИЕ</small></div>
-            <button class="action-btn hot draw-btn" id="soloDraw">ВЫТЯНУТЬ КАРТУ ↗</button>
-            <button class="action-btn complete-btn" id="soloComplete" disabled>✓ ЗАДАНИЕ ВЫПОЛНЕНО — СЛЕДУЮЩЕЕ</button>
-          </div>
+      <div class="hero-draw">
+        <div class="hero-draw-top"><span>CHALLENGE TERMINAL / LIVE</span><span><i></i> READY</span></div>
+        <div class="hero-card" id="soloCard">
+          <span class="draw-card-index">CARD / 000</span>
+          <strong>ГОТОВ<br>К ХАРДУ?</strong>
+          <small>НАЖМИ И ПОЛУЧИ СВОЁ ИСПЫТАНИЕ</small>
         </div>
-        <div class="solo-foot"><span>NO REROLLS. NO EXCUSES.</span><span>ВЫПОЛНИЛ — ПОЛУЧИЛ НОВОЕ.</span></div>
+        <button class="action-btn hot hero-draw-btn" id="soloDraw">ВЫТЯНУТЬ КАРТУ ↗</button>
+        <button class="action-btn complete-btn" id="soloComplete" disabled>✓ ВЫПОЛНЕНО — СЛЕДУЮЩАЯ КАРТА</button>
+        <div class="hero-round"><span id="soloRound">ROUND / 01</span><span>ONE CARD. NO MERCY.</span></div>
       </div>
+    </section>
+
+    <section class="duo-entry">
+      <span class="section-index">02 / MULTIPLAYER</span>
+      <div><h2>ОДНОМУ <i>МАЛО?</i></h2><p>Создай комнату и проходи испытания вместе с напарником.</p></div>
+      <button class="action-btn" id="duoShortcut">DUO ROOM ↗</button>
     </section>
 
     <section class="room-section" id="roomSection" hidden>

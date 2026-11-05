@@ -67,3 +67,30 @@
 @media(max-width:560px){.home-challenge .game-top{flex-direction:row;align-items:center}.solo-big-card{min-height:220px}.solo-big-card strong{font-size:42px}.solo-draw-box{padding:13px!important}.solo-aside{padding:17px}}
 
 .duo-single-control{grid-template-columns:1fr}.duo-single-control .draw-box{max-width:760px;margin:auto;width:100%}
+
+/* v0.8 — hard mode: challenge card is above the fold */
+.challenge-hero{padding:55px 8.5% 60px;min-height:520px;display:grid;grid-template-columns:1fr .82fr;gap:45px;align-items:center;border-bottom:1px solid #393932;position:relative}
+.challenge-hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 45%,#d7f34a08 100%)}
+.hero-left{position:relative;z-index:1}
+.hero-left h1{font-size:clamp(66px,8vw,112px);margin:25px 0 20px;line-height:.78}
+.hero-left p{max-width:430px;font-size:13px;line-height:1.7;color:#aaa99e}
+.hero-meta{display:flex;gap:13px;align-items:center;margin-top:30px;font:600 8px var(--mono);letter-spacing:1.4px;color:#77776b}
+.hero-meta b{color:var(--red)}
+.hero-draw{position:relative;z-index:1;border:1px solid #5a5a4d;background:#1c1c17;padding:15px;box-shadow:8px 8px 0 #090908;transform:rotate(.6deg)}
+.hero-draw-top,.hero-round{display:flex;justify-content:space-between;align-items:center;font:600 8px var(--mono);letter-spacing:1px;color:#96968a;padding:0 2px 12px}
+.hero-draw-top span:last-child{color:var(--acid)}
+.hero-draw-top i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acid);box-shadow:0 0 9px var(--acid);margin-right:6px}
+.hero-card{min-height:245px;background:repeating-linear-gradient(135deg,#292920 0 10px,#202019 10px 20px);border:1px dashed #85856e;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px;position:relative;overflow:hidden}
+.hero-card:after{content:"✳";position:absolute;right:-18px;bottom:-60px;font-size:190px;color:#ffffff08}
+.hero-card .draw-card-index{font:700 10px var(--mono);letter-spacing:2px;color:var(--acid);z-index:1}
+.hero-card strong{font:900 clamp(38px,4.3vw,59px)/.88 var(--display);margin:17px 0;max-width:95%;z-index:1}
+.hero-card small{font:600 9px/1.6 var(--mono);color:#aaa99e;max-width:90%;z-index:1}
+.hero-draw-btn,.hero-draw .complete-btn{width:100%;height:48px;margin-top:9px;font-size:10px}
+.hero-round{padding:12px 2px 0;margin-top:4px;border-top:1px solid #3c3c34;font-size:7px}
+.duo-entry{padding:32px 8.5%;display:flex;align-items:center;gap:25px;background:#171714;border-bottom:1px solid #393932}
+.duo-entry>div{margin-right:auto}
+.duo-entry h2{font-size:34px;margin:7px 0}
+.duo-entry p{font-size:10px;color:#999;margin:0}
+.duo-entry .action-btn{min-width:150px}
+@media(max-width:800px){.challenge-hero{grid-template-columns:1fr;gap:25px;padding:45px 5%}.hero-left h1{font-size:76px}.hero-card{min-height:220px}.duo-entry{padding:28px 5%}}
+@media(max-width:560px){.challenge-hero{padding:38px 5%}.hero-left h1{font-size:62px}.hero-meta{gap:8px;font-size:6px}.hero-draw{padding:10px}.hero-card{min-height:205px}.duo-entry{align-items:flex-start;flex-wrap:wrap}.duo-entry>div{width:100%}}

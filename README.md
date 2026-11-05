@@ -1,19 +1,19 @@
-# DEADLOCK CHALLENGE ROOM — v0.7
+# DEADLOCK CHALLENGE ROOM — v0.8 HARD MODE
 
-## Main screen
-The challenge generator is now the main feature directly under the intro. No category picker and no difficulty picker: every card is drawn from one mixed deck.
+The homepage opens directly on the challenge card. There is no difficulty or category selection: every draw comes from one mixed hard-only deck.
 
-## Challenge deck
-There are 65 challenges in `challengeDeck` inside `app.js`. Add or edit cards as `[TITLE, DESCRIPTION]`.
-Includes mouse sensitivity to maximum, disabling Shift, disabling Space, hero, item, gameplay, and chaos challenges.
+## Challenge pool
+63 hard challenges. Examples: max/min mouse sensitivity, remove Shift, remove Space, stay on lane for 10 minutes, no deaths before 12 minutes, no ult for 15 minutes, no boots all match, five successful ganks, multiple Mid Boss attempts, off-meta builds, hero picked by teammate.
 
-## Completing a challenge
-Draw one card, complete it, press **ЗАДАНИЕ ВЫПОЛНЕНО — СЛЕДУЮЩЕЕ**, then draw a new card. The last-used cards are not repeated until the pool has cycled.
+Edit `challengeDeck` in `app.js`; each card is `[TITLE, DESCRIPTION]`.
+
+## Flow
+Draw a card → complete it → press the completion button → draw the next card. Recently drawn challenges are not repeated until the pool cycles.
 
 ## Duo
-The Duo room entry is a secondary button in the main challenge panel. Duo rooms currently use localStorage + BroadcastChannel and are limited to the same browser/profile. Cross-device play needs a realtime backend such as Supabase.
+Duo entry is secondary, below the main challenge panel. Current room implementation is local-only (same browser/profile); cross-device rooms need a realtime backend such as Supabase.
 
 ## Publish
-Replace `index.html`, `style.css`, `app.js`, and `README.md` in the root of your GitHub repository. GitHub Pages will redeploy automatically.
+Replace `index.html`, `style.css`, `app.js`, and `README.md` in the root of your GitHub repository.
 
 Unofficial fan-made project. Not affiliated with Valve.
